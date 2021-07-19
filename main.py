@@ -16,10 +16,10 @@ import random
 import os
 
 app = Flask(__name__)
-app.secret_key = 'kipl'
+app.secret_key = os.environ.get('SECRET_KEY')
 
 # Databases (SQL)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -187,9 +187,9 @@ def contact():
 
 
 def email_contact_data(name, email, msg):
-    to_email = os.getenv('TO_EMAIL')
-    from_email = os.getenv('FROM_EMAIL')
-    from_pass = os.getenv('FROM_PASSWORD')
+    to_email = os.environ.get('TO_EMAIL')
+    from_email = os.environ.get('FROM_EMAIL')
+    from_pass = os.environ.get('FROM_PASSWORD')
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
