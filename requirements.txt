@@ -8,5 +8,5 @@ Flask-WTF==0.15.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
 SQLAlchemy==1.4.21
-WTForms=2.3.3
+WTForms==2.3.3
 Werkzeug==2.0.1
