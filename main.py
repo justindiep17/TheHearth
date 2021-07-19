@@ -13,6 +13,7 @@ from flask_login import LoginManager, UserMixin, login_user, current_user, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import random
+import os
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
