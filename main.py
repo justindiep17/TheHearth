@@ -15,9 +15,6 @@ from functools import wraps
 import random
 import os
 
-#ENV
-TO_EMAIL = "HELP"
-
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 
@@ -181,16 +178,16 @@ def get_post(post_id):
 def contact():
     contact_form = ContactForm()
     if contact_form.validate_on_submit():
-        name = contact_form.name.data
-        email = contact_form.email.data
-        msg = contact_form.msg.data
+        name = contact_form.contact_name.data
+        email = contact_form.contact_email.data
+        msg = contact_form.contact_msg.data
         email_contact_data(name, email, msg)
         return redirect(url_for('contact'))
     return render_template('contact.html', form=contact_form, logged_in=current_user.is_authenticated, cur_user=current_user)
 
 
 def email_contact_data(name, email, msg):
-    to_email = TO_EMAIL
+    to_email = os.environ.get('TO_EMAIL')
     from_email = os.environ.get('FROM_EMAIL')
     from_pass = os.environ.get('FROM_PASSWORD')
 
