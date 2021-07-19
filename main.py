@@ -13,13 +13,12 @@ from flask_login import LoginManager, UserMixin, login_user, current_user, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import random
-import configure
 
 app = Flask(__name__)
-app.secret_key = configure.SECRET_KEY
+app.secret_key = SECRET_KEY
 
 # Databases (SQL)
-app.config['SQLALCHEMY_DATABASE_URI'] = configure.SQLALCHEMY_DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -184,9 +183,9 @@ def contact():
 
 
 def email_contact_data(name, email, msg):
-    to_email = configure.TO_EMAIL
-    from_email = configure.FROM_EMAIL
-    from_pass = configure.FROM_PASSWORD
+    to_email = TO_EMAIL
+    from_email = FROM_EMAIL
+    from_pass = FROM_PASSWORD
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
