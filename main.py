@@ -116,9 +116,6 @@ class Comment(db.Model):
     parent_post = relationship("Post", back_populates="comments")
 
 
-db.create_all()
-db.session.commit()
-
 def admin_only(func):
     @wraps(func)
     def decorate(*args, **kwargs):
@@ -257,7 +254,7 @@ def delete_post(post_id):
     post = Post.query.get(post_id)
     db.session.delete(post)
     db.session.commit()
-    return redirect(url_for('posts'), logged_in=current_user.is_authenticated, cur_user=current_user)
+    return redirect(url_for('posts'))
 
 
 @app.route('/register', methods=["GET", "POST"])
