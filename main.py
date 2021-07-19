@@ -15,6 +15,9 @@ from functools import wraps
 import random
 import os
 
+#ENV
+TO_EMAIL = os.environ.get('TO_EMAIL')
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 
@@ -187,7 +190,7 @@ def contact():
 
 
 def email_contact_data(name, email, msg):
-    to_email = os.environ.get('TO_EMAIL')
+    to_email = TO_EMAIL
     from_email = os.environ.get('FROM_EMAIL')
     from_pass = os.environ.get('FROM_PASSWORD')
 
