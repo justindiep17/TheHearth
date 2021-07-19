@@ -16,7 +16,7 @@ import random
 import os
 
 #ENV
-TO_EMAIL = os.environ.get('TO_EMAIL')
+TO_EMAIL = "HELP"
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
