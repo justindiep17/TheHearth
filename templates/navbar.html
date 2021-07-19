@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="">ABOUT</a>-->
+<!--        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('contact')}}">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">POSTS</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+        {% if not logged_in %}
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('login')}}">LOGIN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('register')}}">REGISTER</a>
+            </li>
+        </ul>
+        {% else %}
+        <ul class="navbar-nav">
+            <li class="greet-msg">
+                <em>Welcome back {{current_user.username}}!</em>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="{{url_for('logout')}}">LOGOUT</a>
+            </li>
+        </ul>
+        {% endif %}
+
+    </div>
+  </nav>

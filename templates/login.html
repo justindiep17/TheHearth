@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+<!--    Navbar    -->
+{% include 'navbar.html' %}
+
+<!-- Register Form -->
+<h2 class="login-form-title">Login To Your Account</h2>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class="flash-msg">{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{{ wtf.quick_form(form, novalidate=True, id="registration-form") }}
+
+
+
+</body>
+</html>

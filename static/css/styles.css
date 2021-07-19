@@ -1,0 +1,538 @@
+body {
+  background-color:#fff;
+}
+
+.row>* {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+div.row {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.btn {
+    border-radius: 0px;
+    background-color: #91131b;
+    color: white;
+    border: 1px solid #91131b;
+}
+
+.btn:hover {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+/* Navbar  */
+
+.navbar {
+  padding: 0px 12%;
+}
+
+.nav-item {
+  padding: 3px 13px;
+}
+
+.nav-link {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-item:hover {
+  background-color:#91131b;
+}
+
+.greet-msg {
+    padding: 3px 13px;
+}
+
+.greet-msg em {
+    display: block;
+    color: rgba(255,255,255,.55);
+    font-family: "Roboto Condensed";
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+/* Styling For 'home.html' */
+
+#title {
+  padding: 0% 12%;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem 0rem;
+  font-weight: 800;
+  font-family: "Roboto Condensed";
+}
+
+/* Carousel */
+
+.carousel-item {
+    height: auto;
+}
+
+.carousel-row {
+    min-height: 100%;
+    height: 100%;
+}
+
+.featured-img {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.featured-card {
+    border: 1px solid blacks;
+    border-radius: 0;
+    height: auto;
+}
+
+.featured-card .card-body {
+    height: auto;
+    padding: 1rem 1.5rem;
+}
+
+.featured-card .card-title {
+  font-family: 'Roboto Condensed';
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 3%;
+}
+
+.featured-card .card-subtitle, .card-text {
+  font-family: 'Cabin';
+  font-size: 1.2rem;
+}
+
+.featured-card .btn {
+  font-family: 'Cabin';
+  font-size: 1.2rem;
+}
+
+/* Latest Posts Section */
+
+#LatestPosts {
+  padding: 0% 12%;
+}
+
+#LatestPostsTitleBar {
+  margin: 1.2rem 0rem;
+  background-color: black;
+  color: black;
+  padding: 0 0;
+}
+
+#LatestPostsTitleBar h2 {
+  font-family: 'Roboto Condensed';
+  color: white;
+  background-color: #91131b;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0.35rem 0.5rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.card-img-top {
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.post-card-inner {
+  height: 100%;
+}
+
+.post-card:nth-of-type(1) {
+  padding: 0% 0.666% 1% 0%;
+}
+
+.post-card:nth-of-type(2) {
+  padding: 0% 0.333% 1% 0.333%;
+}
+
+.post-card:nth-of-type(3) {
+  padding: 0% 0% 1% 0.666%;
+}
+
+.post-card-title {
+  font-family: 'Roboto Condensed';
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.post-card-body, .post-card-date {
+  font-family: 'Cabin';
+  font-size: 1rem;
+}
+
+.post-card-date {
+  margin-bottom: 0.5rem;
+}
+
+.post-card-btn {
+  font-family: 'Cabin';
+  font-size: 1rem;
+}
+
+.btn-card {
+  margin-bottom: 1%;
+}
+
+#AllPostsBtn {
+  width: 100%;
+  background-color: #91131b;
+  height: 100%;
+  font-family: 'Cabin';
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 800;
+}
+
+#AllPostsBtn:hover {
+    background-color: black;
+}
+
+
+@media only screen and (max-width:767px) { /* Small */
+  .post-card:nth-of-type(1) {
+    padding: 1% 0%;
+  }
+
+  .post-card:nth-of-type(2) {
+    padding: 1% 0%;
+  }
+
+  .post-card:nth-of-type(3) {
+    padding: 1% 0%;
+  }
+
+  .btn-card {
+    padding: 1% 0%;
+    margin-bottom: 0;
+  }
+
+  #AllPostsBtn {
+    font-size: 1.2rem;
+    padding-top: 0%;
+  }
+}
+
+/* Styling For 'posts.html' */
+
+#AllPostsList {
+    padding: 1% 12% 0%;
+}
+
+.all-posts {
+    display: flex;
+}
+
+.preview-card {
+    flex-direction: row;
+    margin: 0rem;
+    border: 2px solid black;
+    border-radius: 0%;
+    margin: 1% 0%;
+    height: auto;
+}
+
+.preview-card img {
+    padding: 0;
+    width: 42%;
+    min-width: 42%;
+    max-width: 42%;
+    height: auto;
+    border-radius: 0px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.preview-card .card-title {
+    font-family: 'Roboto Condensed';
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.preview-card .card-subtitle {
+    font-family: 'Cabin';
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.preview-card .card-text {
+    font-family: 'Cabin';
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.preview-btn {
+    font-family: 'Cabin';
+    font-size: 1rem;
+    font-weight: 400;
+    width: 40%;
+    margin-bottom: 0.5rem;
+    border-color: #91131b;
+}
+
+/* Styling for 'post.html' */
+
+.post-title-banner {
+    position: relative;
+    padding: 10rem 12%;
+    background: no-repeat center center;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.post-title-banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.post-details {
+    z-index: 2;
+}
+
+.post-title {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 6rem;
+    color: white;
+}
+
+.post-date, .post-author {
+    color: white;
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.post-body {
+    padding: 0% 12%;
+    margin: 2% 0%;
+}
+
+.post-body p {
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.edit-post-btn, .del-post-btn {
+    font-family: 'Cabin'
+    font-size: 1.3rem;
+    width: 20%;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+}
+
+#comment-sec {
+    margin: 1% 12% 0%;
+}
+
+#comment-sec h3 {
+    font-family: "Roboto Condensed";
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.comment-box {
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+    margin: 0.5rem 0rem;
+    padding: 1%;
+}
+
+.comment-img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: inline;
+}
+
+.comment-details {
+    margin-left: 1rem;
+}
+
+.comment-text * {
+    margin: 0%;
+}
+
+.comment-author {
+    font-size: 1rem;
+}
+
+.edit-post-btn, .del-post-btn {
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+}
+
+
+/* Styling for 'contact.html' */
+
+.banner-title-center {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 7rem;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+/* Styling for 'register.html' */
+
+.login-form-title {
+    margin: 2% 12%;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.flash-msg {
+    color: red;
+    margin: 0% 12%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+}
+
+/* Forms */
+
+.form {
+    padding: 0% 12%;
+}
+
+.form-group {
+    margin-bottom: 0.4rem;
+}
+
+.control-label {
+    font-family: 'Roboto Condensed';
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.form input[type=text] {
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+    padding: 0.1rem 0.25rem;
+}
+
+.form input[type=submit] {
+    font-family: 'Roboto Condensed';
+    font-size: 1.3rem;
+    font-weight: 800;
+    border: 1px solid #91131b;
+    background-color: #91131b;
+    color: white;
+    margin: 0.4rem 0rem;
+}
+
+.form input[type=submit]:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.form-group textarea {
+    font-family: 'Cabin';
+    font-size: 1.3rem;
+    padding: 0.1rem 0.25rem;
+}
+
+.help-block {
+    font-family: 'Cabin';
+    font-size: 1rem;
+    color: red;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+@media only screen and (max-width:991px) { /* Medium */
+
+  /* Carousel */
+  .featured-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-card {
+    height: auto;
+    width: 100%;
+    padding: 0rem;
+    margin-top: 0;
+  }
+
+  .featured-card .card-text {
+    display: none;
+  }
+
+  .featured-card .card-link {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  .featured-card .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0%;
+    margin-right: 0.5rem;
+  }
+
+  .featured-card .card-subtitle {
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
+  /* Post Cards */
+
+  .post-card:nth-of-type(1) {
+    padding: 1% 1% 1% 0%;
+  }
+
+  .post-card:nth-of-type(2) {
+    padding: 1% 0% 1% 1%;
+  }
+
+  .post-card:nth-of-type(3) {
+    padding: 1% 1% 1% 0%;
+  }
+
+  .btn-card {
+    padding: 1% 0% 1% 1%;
+    margin-bottom: 0;
+  }
+
+  #AllPostsBtn {
+    font-size: 2rem;
+    padding-top: 50%;
+  }
+
+  .preview-card img {
+    display: none;
+  }
+
+}

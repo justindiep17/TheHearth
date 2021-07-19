@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+
+<!--Navbar-->
+{% include 'navbar.html' %}
+
+<div class="row post-title-banner" style="background-image:url('../static/images/contact.jpeg');">
+    <h3 class="banner-title-center">Contact Me</h3>
+</div>
+
+<div class="row post-body">
+    <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+</div>
+
+<div class="row" id="contact-form">
+    {{ wtf.quick_form(form, novalidate=True) }}
+</div>
+
+</body>
+</html>

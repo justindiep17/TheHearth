@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+
+<body>
+  <script src="../static/js/jquery-3.6.0.min.js"></script>
+  <script src="../static/js/home_script.js"></script>
+
+
+  <!-- Navbar -->
+  {% include 'navbar.html' %}
+
+  <!-- Title -->
+  <section id="title">
+    <!-- Website Name -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>The Hearth</h1>
+      </div>
+    </div>
+
+    <!-- Featured Posts Carousel-->
+      <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% set ns = namespace(active=true) %}
+          {% for post in all_posts %}
+          {% if post.featured == true and ns.active %}
+          {% set ns.active = False %}
+          <div class="carousel-item active">
+            <div class="row carousel-row">
+              <img class="featured-img col-lg-8" src={{post.img_path}} alt="featured_image">
+              <div class="card featured-card col-lg-4 shadow">
+                <div class="card-body">
+                  <h3 class="card-title">{{post.title}}</h3>
+                  <h4 class="card-subtitle mb-2 text-muted"><i class="fas fa-clock"></i> {{post.date}}</h4>
+                  <p class="card-text">{{post.description}}</p>
+                  <a href="{{url_for('get_post', post_id=post.id)}}" class="btn card-link">Read Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% elif post.featured == true %}
+          <div class="carousel-item">
+            <div class="row carousel-row">
+              <img class="featured-img col-lg-8" src={{post.img_path}} alt="featured_image">
+              <div class="card featured-card col-lg-4 shadow">
+                <div class="card-body">
+                  <h3 class="card-title">{{post.title}}</h3>
+                  <h4 class="card-subtitle mb-2 text-muted"><i class="fas fa-clock"></i> {{post.date}}</h4>
+                  <p class="card-text">{{post.description}}</p>
+                  <a href="{{url_for('get_post', post_id=post.id)}}" class="btn card-link">Read Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section id="LatestPosts">
+    <div class="row" id="LatestPostsTitleBar">
+      <div class="col-sm-2">
+        <h2>Latest Posts</h2>
+      </div>
+      <div class="col-sm-10">
+      </div>
+    </div>
+    <div class="row">
+      {% for post in all_posts[0:3] %}
+      <div class="col-lg-4 col-md-6 post-card">
+        <div class="card post-card-inner align-items-stretch">
+          <img src={{post.img_path}} class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title post-card-title">{{post.title}}</h5>
+            <p class="post-card-date text-muted"><i class="fas fa-clock"></i> {{post.date}}</p>
+            <p class="card-text post-card-text">{{post.description}}</p>
+            <a href="{{url_for('get_post', post_id=post.id)}}" class="btn btn-primary post-card-btn mt-auto">Read Now</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-lg-12 col-md-6 btn-card">
+        <a class="btn" id="AllPostsBtn" href="{{url_for('posts')}}">All Posts</a>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

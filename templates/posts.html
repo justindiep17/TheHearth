@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+
+<body >
+<script src="../static/js/posts_script.js"></script>
+<!--    Navbar    -->
+{% include 'navbar.html' %}
+<section id="AllPostsList">
+    <div class="row">
+    {% for post in all_posts %}
+            <div class="card preview-card col-12">
+                <img src={{post.img_path}} class="card-img-top img-responsive" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <h6 class="card-subtitle text-muted"><i class="fas fa-clock"></i>&nbsp;&nbsp;{{post.date}}</h6>
+                    <p class="card-text">{{post.description}}</p>
+                    <a href="{{url_for('get_post', post_id=post.id)}}" class="btn btn-dark mt-auto preview-btn card-link"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;Read More</a>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+</section>
+
+<!--<script type="text/javascript">-->
+<!--    var post_lst = document.getElementsByClassName("preview-card");-->
+<!--    var len = post_lst.length-->
+<!--    var max_height = 0-->
+<!--    // Determine The Max Height of Any PostPreviewCard-->
+<!--    for (let i = 0; i < len; i++) {-->
+<!--        if (post_lst[i].offsetHeight > max_height) {-->
+<!--            max_height = post_lst[i].offsetHeight-->
+<!--        }-->
+<!--    }-->
+<!--    // Adjust The Height of Each PostPreviewCard to Be Equal To max_height-->
+<!--    for (let i = 0; i < len; i++) {-->
+<!--        post_lst[i].style.height = max_height+'px';-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>
