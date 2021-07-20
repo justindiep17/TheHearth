@@ -119,6 +119,7 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
     parent_post = relationship("Post", back_populates="comments")
 
+db.create_all()
 
 def admin_only(func):
     @wraps(func)
