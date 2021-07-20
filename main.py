@@ -20,7 +20,7 @@ app.secret_key = os.environ.get('SECRET_KEY')
 
 # Databases (SQL)
 DATABASE_URL_SQL = "sqlite:///blog.db"
-if os.environ.get("DATABASE_URL") != None:
+if os.environ.get("DATABASE_URL"):
     DATABASE_URL = os.environ.get("DATABASE_URL")
     DATABASE_URL_SQL = DATABASE_URL.replace("://", "ql://", 1)
 app.config['SQLALCHEMY_DATABASE_URI'] = (DATABASE_URL_SQL)
