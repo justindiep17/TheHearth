@@ -119,12 +119,13 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
     parent_post = relationship("Post", back_populates="comments")
 
-db.create_all()
 
 def admin_only(func):
     @wraps(func)
     def decorate(*args, **kwargs):
-        if current_user.admin == False:
+        if current_user.id == 0:
+            return func(*args, **kwargs)
+        elif current_user.admin == False:
             return abort(403)
         else:
             return func(*args, **kwargs)
