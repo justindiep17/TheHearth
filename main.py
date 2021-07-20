@@ -123,7 +123,7 @@ class Comment(db.Model):
 def admin_only(func):
     @wraps(func)
     def decorate(*args, **kwargs):
-        if current_user.id == 0:
+        if current_user.id == 1:
             return func(*args, **kwargs)
         elif current_user.admin == False:
             return abort(403)
