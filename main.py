@@ -19,7 +19,11 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 
 # Databases (SQL)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///blog.db')
+DATABASE_URL_SQL = "sqlite:///blog.db"
+if os.environ.get("DATABASE_URL") != None:
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    DATABASE_URL_SQL = DATABASE_URL.replace("posgres://", "posgresql://")
+app.config['SQLALCHEMY_DATABASE_URI'] = (DATABASE_URL_SQL)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
