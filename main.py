@@ -91,7 +91,7 @@ class Post(db.Model):
     title = db.Column(db.String(250), unique=True, nullable=False)
     description = db.Column(db.String(300), unique=False, nullable=False)
     date = db.Column(db.String(300), unique=False, nullable=False)
-    body = db.Column(db.String(2000), unique=True, nullable=False)
+    body = db.Column(db.String(20000), unique=True, nullable=False)
     author = db.Column(db.String(2000), unique=False, nullable=False)
     img_path = db.Column(db.String(2000), unique=False, nullable=False)
     featured = db.Column(db.Boolean, unique=False, nullable=False)
@@ -119,7 +119,8 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
     parent_post = relationship("Post", back_populates="comments")
 
-
+db.create_all()
+db.session.commit()
 def admin_only(func):
     @wraps(func)
     def decorate(*args, **kwargs):
