@@ -17,7 +17,7 @@
 
 <div class="row post-body">
     {{post.body|safe}}
-    {% if cur_user.admin%}
+    {% if cur_user.id == 0%}
     <a class="btn edit-post-btn" href="{{url_for('edit_post', post_id=post.id)}}">Edit Post</a>
     <a class="btn del-post-btn" href="{{url_for('delete_post', post_id=post.id)}}">Delete Post</a>
     {% endif %}
