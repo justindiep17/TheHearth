@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d607ebd-3e39-4a09-aafb-b7c9d02cf84a" name="Default Changelist" comment="Connected to Postgres database">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="3d607ebd-3e39-4a09-aafb-b7c9d02cf84a" name="Default Changelist" comment="Increased Post Body Limit To 50000 Characters." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626751565548</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Increased Post Body Limit To 50000 Characters.">
+      <created>1627057901311</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1627057901311</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +310,7 @@
     <MESSAGE value="Fixed Bug With Contact Form" />
     <MESSAGE value="Connected to Posttgres database" />
     <MESSAGE value="Connected to Postgres database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected to Postgres database" />
+    <MESSAGE value="Increased Post Body Limit To 50000 Characters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Increased Post Body Limit To 50000 Characters." />
   </component>
 </project>
