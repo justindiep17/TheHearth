@@ -80,12 +80,12 @@ h1 {
 }
 
 .carousel-row {
-    min-height: 100%;
     height: 100%;
 }
 
 .featured-img {
-    height: 100%;
+    vertical-align: middle;
+    height: autox;
     object-fit: cover;
     overflow: hidden;
 }
@@ -97,7 +97,6 @@ h1 {
 }
 
 .featured-card .card-body {
-    height: auto;
     padding: 1rem 1.5rem;
 }
 

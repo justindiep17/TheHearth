@@ -32,7 +32,7 @@
               <img class="featured-img col-lg-8" src={{post.img_path}} alt="featured_image">
               <div class="card featured-card col-lg-4 shadow">
                 <div class="card-body">
-                  <h3 class="card-title">{{TO_EMAIL}}</h3>
+                  <h3 class="card-title">{{post.title}}</h3>
                   <h4 class="card-subtitle mb-2 text-muted"><i class="fas fa-clock"></i> {{post.date}}</h4>
                   <p class="card-text">{{post.description}}</p>
                   <a href="{{url_for('get_post', post_id=post.id)}}" class="btn card-link">Read Now</a>
