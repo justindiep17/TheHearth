@@ -254,7 +254,7 @@ def edit_post(post_id):
         post.img_path = edit_form.new_post_img.data
         post.body = edit_form.new_post_body.data
         post.featured = edit_post_featured
-        post.date = edit_post.date
+        post.date = edit_form.new_post_date.date
         db.session.commit()
         return redirect(url_for('get_post', post_id=post_id))
     return render_template('edit_post.html', post=post, form=edit_form, logged_in=current_user.is_authenticated, cur_user=current_user)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d607ebd-3e39-4a09-aafb-b7c9d02cf84a" name="Default Changelist" comment="Fixed New Post Form">
+    <list default="true" id="3d607ebd-3e39-4a09-aafb-b7c9d02cf84a" name="Default Changelist" comment="Fixed Edit Post Form">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -347,7 +347,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631305959385</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Fixed New Post Form">
+      <created>1631306095068</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1631306095068</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Fixed Edit Post Form">
+      <created>1631306235125</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1631306235125</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -373,6 +387,7 @@
     <MESSAGE value="Fixed Bug Causing Delete and Edit Button Not Showing Up On Post" />
     <MESSAGE value="Fixed Home Page Title Not Showing Up on Featured Posts" />
     <MESSAGE value="Fixed New Post Form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed New Post Form" />
+    <MESSAGE value="Fixed Edit Post Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Edit Post Form" />
   </component>
 </project>
