@@ -241,7 +241,7 @@ def new_post():
 def edit_post(post_id):
     post = Post.query.get(post_id)
     edit_form = NewPostForm(new_post_title=post.title, new_post_des=post.description, new_post_author=post.author,
-                            new_post_img=post.img_path, new_post_body=post.body, new_post_featured=post.featured)
+                            new_post_img=post.img_path, new_post_body=post.body, new_post_featured=post.featured, new_post_date=post.date)
     if edit_form.validate_on_submit():
         edit_post_featured = post.featured
         if edit_form.new_post_featured.data == 'True':
