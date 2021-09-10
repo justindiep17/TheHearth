@@ -47,6 +47,7 @@ class ContactForm(FlaskForm):
 class NewPostForm(FlaskForm):
     new_post_title = StringField('Blog Post Title', validators=[DataRequired()])
     new_post_des = StringField('Blog Post Description', validators=[DataRequired()])
+    new_post_date = StringField('Blog Date of Submission')
     new_post_author = StringField('Your Name', validators=[DataRequired()])
     new_post_img = StringField('Blog Image URL', validators=[DataRequired(), URL()])
     new_post_featured = SelectField("Featured?", validators=[DataRequired()], choices=[True, False])
@@ -215,10 +216,14 @@ def new_post():
         new_post_featured = False
         if new_post_form.new_post_featured.data == "True":
             new_post_featured = True
+        if new_post_form.new_post_date.data:
+            submit_date=new_post_form.new_post_date.data
+        else:
+            submit_date=dt.datetime.now().strftime("%b %d, %Y")
         new_post = Post(
             title=new_post_form.new_post_title.data,
             description=new_post_form.new_post_des.data,
-            date=dt.datetime.now().strftime("%b %d, %Y"),
+            date=submit_date,
             author=new_post_form.new_post_author.data,
             body=new_post_form.new_post_body.data,
             img_path=new_post_form.new_post_img.data,
