@@ -15,4 +15,5 @@ Admin users, like regular users, are also able to comment on and read existing p
 
 Users register and log onto the website by providing a unique username along with a password. By default, newly registered users are not given admin permissions. When a user registers on The Hearth, the data about the user's account is then sent to a PostgreSQL database for storage and reference. In order to store users passwords in the database securely, passwords are encrypted by sending them through ten rounds of salting and hashing using a hash function provided by the werkzeug library.
 
-## 
+### Post Management
+CRUD operations for posts/articles are implemented using RESTful routing techniques. 
