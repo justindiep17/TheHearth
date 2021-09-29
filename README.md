@@ -6,7 +6,7 @@ To access the website click the following link: https://the-hearth.herokuapp.com
 ## How Does The Hearth Work?
 The below sections describe how the different features of The Hearth work and are implemented.
 
-## User Authentication
+### User Authentication
 The Hearth uses user authentication to enable and disable certain features on the website depending on the user. This feature is implemented with the help of the flask_login library. 
 
 Users who have no registered or are not logged in have the most restrictions placed on them. They are only able to view and read articles, as well as see comments but not post new ones. Users who are registered on the website and are logged are able to post unlimited comments on any of the articles they read.
