@@ -17,3 +17,9 @@ Users register and log onto the website by providing a unique username along wit
 
 ### Post Management
 CRUD operations for posts/articles are implemented using RESTful routing techniques. 
+
+Creating new post is done by acessing the protected "/new-post" route. After filling out the details for a new post, the form data is added to our PostgreSQL database using a POST request also a "/new-post".
+
+Reading posts is done by sending a GET request to "/post/<post-id>" where "<post-id>" is replaced with the id of the post wanted. The data about the particular post is then retrieved from our database and displayed to the user as a webpage.
+  
+Updating posts is done by first sending a GET request to the protected "/edit-post/<post-id>" route where "<post-id>" is replaced with the id of the post to edit. Existing data about the post is then retrieved from the database and sent into a HTML form where users can now edit the post details. After editing, the edited post details are then posted to the database using a POST request.
