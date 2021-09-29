@@ -4,4 +4,4 @@ The Hearth is a blog website about the Blizzard video game Hearthstone. It featu
 ## How Does The Hearth Work?
 
 ## User Authentication
-Users have the option of registering on the website using an email and password.
+Users have the option of registering on the website using an custom username and password.
