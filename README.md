@@ -1,6 +1,7 @@
 ## What Is The Hearth?
 The Hearth is a blog website about the Blizzard video game Hearthstone. It features self-written articles about Hearthstone news, decks, and gameplay.
 
+<img src="https://justin-diep.com/imgs/projects/the_hearth.png">
 To access the website click the following link: https://the-hearth.herokuapp.com/
 
 ## How Does The Hearth Work?
